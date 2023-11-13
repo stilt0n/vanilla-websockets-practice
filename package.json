@@ -1,0 +1,10 @@
+{
+  "name": "vanilla-web-sockets",
+  "packageManager": "yarn@3.5.1",
+  "scripts": {
+    "server": "npx nodemon vanillaServer.js"
+  },
+  "dependencies": {
+    "ws": "^8.14.2"
+  }
+}

@@ -1,0 +1,16 @@
+<script>
+  // We use ws instead of http so we hit the web socket server
+  // instead of hitting the http server
+  const ws = new WebSocket("ws://localhost:8000");
+  console.log(ws);
+
+  ws.onopen = (event) => {
+    console.log(event);
+    ws.send(
+      "Thanks for the connection! Want to hear about my essential oils business?!?!"
+    );
+  };
+
+  // Just to showcase that there are two syntaxes for this
+  ws.addEventListener("message", (message) => console.log(message.data));
+</script>
